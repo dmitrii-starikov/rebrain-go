@@ -1,0 +1,2 @@
+- [Package context](https://golang.org/pkg/context/)
+- [A tour of Go. Concurrency](https://tour.golang.org/concurrency/5)
