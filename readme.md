@@ -114,9 +114,9 @@ rebrain-go/
 - [x] **Block 01:** Goroutines
 - [x] **Block 02:** Go Scheduler
 - [x] **Block 03:** Race Conditions
-- [ ] **Block 04:** sync and atomic Packages
-- [ ] **Block 05:** Channels pt.1. Deadlocks
-- [ ] **Block 06:** Channels pt.2. Context
+- [x] **Block 04:** sync and atomic Packages
+- [x] **Block 05:** Channels pt.1. Deadlocks
+- [x] **Block 06:** Channels pt.2. Context
 - [ ] **Block 07:** sync.Pool*
 - [ ] **Block 08:** errgroup Package*
 
