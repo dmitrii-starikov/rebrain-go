@@ -1,0 +1,2 @@
+- [Understanding sync.Pool](https://medium.com/swlh/go-the-idea-behind-sync-pool-32da5089df72)
+- [The principle of reusing the concurrency buffer pool object](https://russianblogs.com/article/48491443059/)

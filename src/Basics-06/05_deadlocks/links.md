@@ -91,3 +91,30 @@ are blocked.
 - [Edsger W. Dijkstra](https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%B9%D0%BA%D1%81%D1%82%D1%80%D0%B0,_%D0%AD%D0%B4%D1%81%D0%B3%D0%B5%D1%80_%D0%92%D0%B8%D0%B1%D0%B5)
 - [Dining philosophers problem](https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BE%D0%B1_%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0%D1%8E%D1%89%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D0%B0%D1%85)
 - [Semaphore](https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BC%D0%B0%D1%84%D0%BE%D1%80_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5))
+
+# Buffered vs Unbuffered Channels
+| Aspect	| Unbuffered Channel                                                               |	Buffered Channel |
+|---|----------------------------------------------------------------------------------|---|
+| Declaration  | make(chan T) or make(chan T, 0)                                                  | make(chan T, N) where N > 0 |
+|Capacity| 0 (no storage)                                                                   |N elements can be stored|	
+|Send behavior| Blocks until receiver is ready                                                   |Blocks only when buffer is full|	
+|Receive behavior| Blocks until sender is ready                                                     |Blocks only when buffer is empty|
+|Synchronization| Provides guaranteed synchronization ("handshake")                                |No synchronization guarantee|
+|Use cases| • Signaling between goroutines • Guaranteed handoff • Synchronization primitives |• Task queues • Work pools • Decoupling sender/receiver • Rate limiting|
+|Analogy| Hand-to-hand delivery (both parties must be present)                       |Mailbox with capacity (sender drops, receiver picks up later)|
+
+## Key Takeaways
+- **Unbuffered channels** ensure that send and receive happen simultaneously - perfect for synchronization when you need guarantees.
+- **Buffered channels** decouple the sender and receiver, allowing them to operate at different speeds - ideal for building pipelines and queues.
+
+Choose based on your needs: use unbuffered for coordination, buffered for decoupling!
+
+An **unbuffered channel** is like a walkie-talkie:
+* You can only speak (and want to be listened) when you press a button and someone is listening.
+* Synchronization is needed: "You to me, I to you."
+* Can be reused.
+
+A **buffered channel** is like email:
+* Send and forget.
+* The recipient will read it when it's convenient.
+* There's a buffer of a certain size.

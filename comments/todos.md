@@ -4,3 +4,4 @@
 - [x] Repeat (empty) interfaces
 - [x] Repeat inheritance
 - [ ] Re-read about [scheduler](src/Basics-06/02_scheduler/links.md)
+- [ ] Re-read about [deadlocks](src/Basics-06/05_deadlocks/links.md)
