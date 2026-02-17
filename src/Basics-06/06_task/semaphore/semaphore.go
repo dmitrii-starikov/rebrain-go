@@ -3,12 +3,13 @@ package semaphore
 import "sync/atomic"
 
 type Semaphore struct {
-	slots chan int
+	// chan struct{} better than int in src/Basics-06/05_task/semaphore/semaphore.go
+	slots chan struct{}
 	tasks int32
 }
 
 func NewSemaphore(slots int) *Semaphore {
-	c := make(chan int, slots)
+	c := make(chan struct{}, slots)
 	return &Semaphore{
 		slots: c,
 		tasks: 0,
@@ -16,7 +17,7 @@ func NewSemaphore(slots int) *Semaphore {
 }
 
 func (m *Semaphore) P() {
-	m.slots <- 1
+	m.slots <- struct{}{}
 }
 
 func (m *Semaphore) V() {
