@@ -117,7 +117,7 @@ rebrain-go/
 - [x] **Block 04:** sync and atomic Packages
 - [x] **Block 05:** Channels pt.1. Deadlocks
 - [x] **Block 06:** Channels pt.2. Context
-- [ ] **Block 07:** sync.Pool*
+- [x] **Block 07:** sync.Pool*
 - [ ] **Block 08:** errgroup Package*
 
 ### ⏳ Module 07: Testing, Benchmarks and Profiling
