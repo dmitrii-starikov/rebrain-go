@@ -108,17 +108,56 @@ rebrain-go/
   - [Useful links](src/Basics-05/04_empty_interface/links.md)
 
 - [x] **Block 05:** Composite Inheritance
-- [x] **Block 06:** Advanced Error Handling
+  - `05_inheritance/` - [main.go](src/Basics-05/05_inheritance/main.go)
+  - Task: [05_task/](src/Basics-05/05_task/) with `overdue` type
 
-### ⏳ Module 06: Concurrency
+- [x] **Block 06:** Advanced Error Handling
+  - `06_advanced_error_handling/` - [main.go](src/Basics-05/06_advanced_error_handling/main.go)
+  - Task: [06_task/homework.go](src/Basics-05/06_task/homework.go)
+  - [Useful links](src/Basics-05/06_advanced_error_handling/links.md)
+
+### Module 06: Concurrency
 - [x] **Block 01:** Goroutines
+  - `01_goroutines/` - [goroutines.go](src/Basics-06/01_goroutines/goroutines.go), [channel.go](src/Basics-06/01_goroutines/channel.go), [select.go](src/Basics-06/01_goroutines/select.go)
+  - Examples: [sum.go](src/Basics-06/01_goroutines/sum.go), [fibonacci.go](src/Basics-06/01_goroutines/fibonacci.go), [webcrawler.go](src/Basics-06/01_goroutines/webcrawler.go), [mutex.go](src/Basics-06/01_goroutines/mutex.go), [numbers.go](src/Basics-06/01_goroutines/numbers.go)
+  - Task: [01_task/goroutines.go](src/Basics-06/01_task/goroutines.go)
+  - [Useful links](src/Basics-06/01_goroutines/links.md)
+
 - [x] **Block 02:** Go Scheduler
+  - `02_scheduler/` - [procs.go](src/Basics-06/02_scheduler/procs.go)
+  - Task: [02_task/](src/Basics-06/02_task/) with `gosched/` and `procs/` examples, screenshots
+  - [task.md](src/Basics-06/02_task/task.md)
+  - [Useful links](src/Basics-06/02_scheduler/links.md)
+
 - [x] **Block 03:** Race Conditions
+  - `03_race_condition/` - [7dollars.go](src/Basics-06/03_race_condition/7dollars.go), [mutex7dollars.go](src/Basics-06/03_race_condition/mutex7dollars.go)
+  - Task: [03_task/](src/Basics-06/03_task/) with `cache/` (unsafe and thread-safe implementations)
+  - [README.md](src/Basics-06/03_race_condition/README.md)
+
 - [x] **Block 04:** sync and atomic Packages
+  - `04_sync_n_atomic/` - [rwmutex.go](src/Basics-06/04_sync_n_atomic/rwmutex.go)
+  - Task: [04_task/](src/Basics-06/04_task/) with `cache/rw-safe.go`
+  - [Useful links](src/Basics-06/04_sync_n_atomic/links.md)
+
 - [x] **Block 05:** Channels pt.1. Deadlocks
+  - `05_deadlocks/` - [channel.go](src/Basics-06/05_deadlocks/channel.go), [unbuf_pingpong.go](src/Basics-06/05_deadlocks/unbuf_pingpong.go), [semaphore.go](src/Basics-06/05_deadlocks/semaphore.go)
+  - Task: [05_task/](src/Basics-06/05_task/) with `cache/rw-safe.go` and `semaphore/semaphore.go`
+  - [Useful links](src/Basics-06/05_deadlocks/links.md)
+
 - [x] **Block 06:** Channels pt.2. Context
-- [x] **Block 07:** sync.Pool*
-- [ ] **Block 08:** errgroup Package*
+  - `06_context/` - [context.go](src/Basics-06/06_context/context.go), [timeout.go](src/Basics-06/06_context/timeout.go), [goroutines.go](src/Basics-06/06_context/goroutines.go), [select.go](src/Basics-06/06_context/select.go)
+  - Task: [06_task/](src/Basics-06/06_task/) with `cache/rw-safe.go`, `semaphore/semaphore.go`, screenshots and [result.md](src/Basics-06/06_task/result.md)
+  - [Useful links](src/Basics-06/06_context/links.md)
+
+- [x] **Block 07:** sync.Pool
+  - `07_pool/` - [json.go](src/Basics-06/07_pool/json.go)
+  - Task: [07_task/](src/Basics-06/07_task/) - [increment.go](src/Basics-06/07_task/increment.go), [increment_test.go](src/Basics-06/07_task/increment_test.go)
+  - Screenshots: [without.png](src/Basics-06/07_task/without.png), [tests.png](src/Basics-06/07_task/tests.png)
+  - [commands.md](src/Basics-06/07_task/commands.md), [Useful links](src/Basics-06/07_task/links.md) and [Useful links](src/Basics-06/07_pool/links.md)
+
+- [x] **Block 08:** errgroup Package
+  - `08_errgroup/` - [errgroup.go](src/Basics-06/08_errgroup/errgroup.go)
+  - Task: [08_task/](src/Basics-06/08_task/) - [links.go](src/Basics-06/08_task/links.go), [readme.md](src/Basics-06/08_task/readme.md)
 
 ### ⏳ Module 07: Testing, Benchmarks and Profiling
 - [ ] **Block 01:** Unit Testing in Go
