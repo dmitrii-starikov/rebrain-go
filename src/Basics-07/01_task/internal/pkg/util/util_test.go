@@ -280,3 +280,137 @@ func TestIsPalindrome(t *testing.T) {
 	t.Run("large non-palindrome", palindromeCase(123456789, false))
 	t.Run("max int palindrome", palindromeCase(2147447412, true))
 }
+
+func TestFib(t *testing.T) {
+	t.Parallel()
+
+	testCases := []struct {
+		name     string
+		n        int
+		expected int
+	}{
+		{"fib 0", 0, 0},
+		{"fib 1", 1, 1},
+		{"fib 2", 2, 1},
+		{"fib 3", 3, 2},
+		{"fib 4", 4, 3},
+		{"fib 5", 5, 5},
+		{"fib 6", 6, 8},
+		{"fib 7", 7, 13},
+		{"fib 8", 8, 21},
+		{"fib 9", 9, 34},
+		{"fib 10", 10, 55},
+	}
+
+	for _, tc := range testCases {
+		tc := tc
+		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
+			require.Equal(t, tc.expected, Fib(tc.n))
+		})
+	}
+}
+
+func TestMakeSlice(t *testing.T) {
+	t.Parallel()
+
+	testCases := []struct {
+		name     string
+		length   int
+		expected []int
+	}{
+		{
+			name:     "length 0",
+			length:   0,
+			expected: []int{},
+		},
+		{
+			name:     "length 1",
+			length:   1,
+			expected: []int{0},
+		},
+		{
+			name:     "length 3",
+			length:   3,
+			expected: []int{0, 1, 2},
+		},
+		{
+			name:     "length 5",
+			length:   5,
+			expected: []int{0, 1, 2, 3, 4},
+		},
+	}
+
+	for _, tc := range testCases {
+		tc := tc
+		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
+			result := MakeSlice(tc.length)
+			require.Equal(t, tc.expected, result)
+		})
+	}
+}
+
+func TestPad(t *testing.T) {
+	t.Parallel()
+
+	testCases := []struct {
+		name     string
+		s        string
+		length   int
+		template string
+		expected string
+	}{
+		{
+			name:     "already long enough",
+			s:        "hello",
+			length:   3,
+			template: "x",
+			expected: "hello",
+		},
+		{
+			name:     "exact length",
+			s:        "hello",
+			length:   5,
+			template: "x",
+			expected: "hello",
+		},
+		{
+			name:     "pad with single char",
+			s:        "a",
+			length:   3,
+			template: "b",
+			expected: "abb",
+		},
+		{
+			name:     "pad with multiple chars",
+			s:        "test",
+			length:   7,
+			template: "xy",
+			expected: "testxyxy",
+		},
+		{
+			name:     "empty string",
+			s:        "",
+			length:   5,
+			template: "-",
+			expected: "-----",
+		},
+		{
+			name:     "empty template",
+			s:        "test",
+			length:   8,
+			template: "",
+			expected: "test",
+		},
+	}
+
+	for _, tc := range testCases {
+		tc := tc
+		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
+			result := Pad(tc.s, tc.length, tc.template)
+			require.Equal(t, tc.expected, result)
+		})
+	}
+}

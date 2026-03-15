@@ -75,6 +75,9 @@ func MakeSlice(l int) []int {
 
 // Pad - make new string with template data. For example ("a", 3, "b") -> "abbb"
 func Pad(s string, length int, template string) string {
+	if template == "" {
+		return s
+	}
 	for len(s) < length {
 		s += template
 	}
