@@ -160,10 +160,10 @@ rebrain-go/
   - Task: [08_task/](src/Basics-06/08_task/) - [links.go](src/Basics-06/08_task/links.go), [readme.md](src/Basics-06/08_task/readme.md)
 
 ### ⏳ Module 07: Testing, Benchmarks and Profiling
-- [ ] **Block 01:** Unit Testing in Go
-- [ ] **Block 02:** Mocks, Stubs and Generation with GoMock
-- [ ] **Block 03:** Table Driven Tests vs Closure Driven Tests*
-- [ ] **Block 04:** Test Coverage
+- [x] **Block 01:** Unit Testing in Go
+- [x] **Block 02:** Mocks, Stubs and Generation with GoMock
+- [x] **Block 03:** Table Driven Tests vs Closure Driven Tests*
+- [x] **Block 04:** Test Coverage
 - [ ] **Block 05:** Benchmarks
 - [ ] **Block 06:** Profiling with pprof
 

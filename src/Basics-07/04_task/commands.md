@@ -92,3 +92,9 @@ ok      module06/internal/pkg/util      0.007s  coverage: 100.0% of statements <
 ```bash
 go tool cover -html=profile.out
 ```
+
+**or in 1 line:**
+
+```bash
+go test -coverprofile=coverage.out ./... && go tool cover -html=coverage.out && rm coverage.out
+```
