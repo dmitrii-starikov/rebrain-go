@@ -54,7 +54,7 @@ func IsPalindrome(x int) bool {
 	return x == revertedNum || x == revertedNum/10
 }
 
-// Fib - calculate fibanachi num. For example 10 -> 34
+// Fib - calculate Fibonacci num. For example 10 -> 34
 func Fib(n int) int {
 	if n < 2 {
 		return n
