@@ -1,0 +1,26 @@
+goos: linux
+goarch: amd64
+pkg: module06/internal/pkg/util
+cpu: AMD Ryzen 3 3100 4-Core Processor              
+BenchmarkFib-8         	62771568	        19.36 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	62286735	        19.32 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	60785040	        19.94 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	61443501	        19.33 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	60518142	        20.34 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	58719942	        20.12 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	58683561	        19.57 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	59461908	        19.77 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	59816079	        19.56 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-8         	61543940	        19.45 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMakeSlice-8   	     224	   5142550 ns/op	24002560 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     223	   5200015 ns/op	24002563 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     225	   5413965 ns/op	24002569 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     223	   5309545 ns/op	24002569 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     230	   5291913 ns/op	24002574 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     230	   5311195 ns/op	24002572 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     224	   5375525 ns/op	24002577 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     230	   5111152 ns/op	24002580 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     234	   5107758 ns/op	24002574 B/op	       1 allocs/op
+BenchmarkMakeSlice-8   	     235	   5089280 ns/op	24002576 B/op	       1 allocs/op
+PASS
+ok  	module06/internal/pkg/util	34.442s

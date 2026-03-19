@@ -55,21 +55,42 @@ func IsPalindrome(x int) bool {
 }
 
 // Fib - calculate Fibonacci num. For example 10 -> 34
+func FibRecursive(n int) int {
+	if n < 2 {
+		return n
+	}
+
+	return FibRecursive(n-1) + FibRecursive(n-2)
+}
+
+// iterative
 func Fib(n int) int {
 	if n < 2 {
 		return n
 	}
 
-	return Fib(n-1) + Fib(n-2)
+	a, b := 0, 1
+	for i := 2; i <= n; i++ {
+		a, b = b, a+b
+	}
+	return b
 }
 
 // MakeSlice - make new slice with size and put zero for all cell. For example 3 -> [0, 0, 0]
-func MakeSlice(l int) []int {
+func MakeSliceWithoutCapacity(l int) []int {
 	a := make([]int, 0)
 	for i := 0; i < l; i++ {
 		a = append(a, i)
 	}
 
+	return a
+}
+
+func MakeSlice(l int) []int {
+	a := make([]int, 0, l)
+	for i := 0; i < l; i++ {
+		a = append(a, i)
+	}
 	return a
 }
 
