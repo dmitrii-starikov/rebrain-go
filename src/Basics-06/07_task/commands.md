@@ -13,12 +13,12 @@ Compare tests
 go test -bench=. -benchmem -benchtime=100x
 ```
 
-| Benchmark | Iterations | ns/op | B/op | allocs/op |
-|-----------|------------|-------|------|-----------|
-| BenchmarkWithAllocationButWithoutPool-8 | 100 | 1020 ns/op | 0 B/op | 0 allocs/op |
-| BenchmarkWithPool_SingleObject-8 | 100 | 892.9 ns/op | 11 B/op | 0 allocs/op |
-| BenchmarkWithPool-8 | 100 | 469772 ns/op | 11 B/op | 0 allocs/op |
-| BenchmarkWithoutPool-8 | 100 | 439649 ns/op | 0 B/op | 0 allocs/op |
+| Benchmark                               | Iterations | ns/op        | B/op    | allocs/op   |
+|-----------------------------------------|------------|--------------|---------|-------------|
+| BenchmarkWithAllocationButWithoutPool-8 | 100        | 1020 ns/op   | 0 B/op  | 0 allocs/op |
+| BenchmarkWithPool_SingleObject-8        | 100        | 892.9 ns/op  | 11 B/op | 0 allocs/op |
+| BenchmarkWithPool-8                     | 100        | 469772 ns/op | 11 B/op | 0 allocs/op |
+| BenchmarkWithoutPool-8                  | 100        | 439649 ns/op | 0 B/op  | 0 allocs/op |
 
 
 ```go

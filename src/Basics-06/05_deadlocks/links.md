@@ -93,15 +93,15 @@ are blocked.
 - [Semaphore](https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BC%D0%B0%D1%84%D0%BE%D1%80_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5))
 
 # Buffered vs Unbuffered Channels
-| Aspect	| Unbuffered Channel                                                               |	Buffered Channel |
-|---|----------------------------------------------------------------------------------|---|
-| Declaration  | make(chan T) or make(chan T, 0)                                                  | make(chan T, N) where N > 0 |
-|Capacity| 0 (no storage)                                                                   |N elements can be stored|	
-|Send behavior| Blocks until receiver is ready                                                   |Blocks only when buffer is full|	
-|Receive behavior| Blocks until sender is ready                                                     |Blocks only when buffer is empty|
-|Synchronization| Provides guaranteed synchronization ("handshake")                                |No synchronization guarantee|
-|Use cases| • Signaling between goroutines • Guaranteed handoff • Synchronization primitives |• Task queues • Work pools • Decoupling sender/receiver • Rate limiting|
-|Analogy| Hand-to-hand delivery (both parties must be present)                       |Mailbox with capacity (sender drops, receiver picks up later)|
+| Aspect	          | Unbuffered Channel                                                               | 	Buffered Channel                                                       |
+|------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| Declaration      | make(chan T) or make(chan T, 0)                                                  | make(chan T, N) where N > 0                                             |
+| Capacity         | 0 (no storage)                                                                   | N elements can be stored                                                |	
+| Send behavior    | Blocks until receiver is ready                                                   | Blocks only when buffer is full                                         |	
+| Receive behavior | Blocks until sender is ready                                                     | Blocks only when buffer is empty                                        |
+| Synchronization  | Provides guaranteed synchronization ("handshake")                                | No synchronization guarantee                                            |
+| Use cases        | • Signaling between goroutines • Guaranteed handoff • Synchronization primitives | • Task queues • Work pools • Decoupling sender/receiver • Rate limiting |
+| Analogy          | Hand-to-hand delivery (both parties must be present)                             | Mailbox with capacity (sender drops, receiver picks up later)           |
 
 ## Key Takeaways
 - **Unbuffered channels** ensure that send and receive happen simultaneously - perfect for synchronization when you need guarantees.
