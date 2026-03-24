@@ -95,7 +95,7 @@ func MakeSlice(l int) []int {
 }
 
 // Pad - make new string with template data. For example ("a", 3, "b") -> "abbb"
-func Pad(s string, length int, template string) string {
+func PadOriginal(s string, length int, template string) string {
 	if template == "" {
 		return s
 	}
@@ -104,4 +104,26 @@ func Pad(s string, length int, template string) string {
 	}
 
 	return s
+}
+
+func Pad(s string, length int, template string) string {
+	if template == "" || len(s) >= length {
+		return s
+	}
+
+	// 1 allocation
+	result := make([]byte, length)
+
+	copy(result, s)
+
+	tpl := []byte(template)
+	tplLen := len(tpl)
+	pos := len(s)
+
+	for pos < length {
+		copy(result[pos:], tpl)
+		pos += tplLen
+	}
+
+	return string(result)
 }

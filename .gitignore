@@ -7,3 +7,4 @@ bin/
 src/**/vendor/
 /src/Basics-04/04_project/project-layout/
 /pkg/
+**/*.pprof

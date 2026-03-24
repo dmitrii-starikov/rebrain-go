@@ -3,6 +3,7 @@ package main
 import (
 	"module06/internal/app/handlers/hello"
 	"net/http"
+	_ "net/http/pprof"
 )
 
 func main() {
