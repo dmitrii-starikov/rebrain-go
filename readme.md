@@ -164,8 +164,8 @@ rebrain-go/
 - [x] **Block 02:** Mocks, Stubs and Generation with GoMock
 - [x] **Block 03:** Table Driven Tests vs Closure Driven Tests*
 - [x] **Block 04:** Test Coverage
-- [ ] **Block 05:** Benchmarks
-- [ ] **Block 06:** Profiling with pprof
+- [x] **Block 05:** Benchmarks
+- [x] **Block 06:** Profiling with pprof
 
 ### ⏳ Module 08: Code Generation
 - [ ] **Block 01:** Reflection
