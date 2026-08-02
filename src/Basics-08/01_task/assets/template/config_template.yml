@@ -1,0 +1,10 @@
+# Это простой пример шаблона! Можете изменить и дополнить шаблон по вашему усматрению.
+
+service:
+  name: {{ .Name }}
+  port: {{ .Port }}
+  replicaset: {{ .ReplicaSet }}
+
+  container:
+    image: "{{ .ImageName }}:{{ .Tag }}"
+    env_file: {{ .EnvPath }}
