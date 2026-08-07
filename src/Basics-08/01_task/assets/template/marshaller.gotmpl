@@ -1,1 +1,17 @@
-package {{.package}}
+package {{.Package}}
+
+func (c {{.StructName}}) StructToMap() map[string]interface{} {
+    result := make(map[string]interface{})
+
+    {{- range .Fields}}
+        {{- if .IsExported}}
+            {{- if .Tag}}
+    result["{{.Tag}}"] = c.{{.Name}}
+            {{- else}}
+    result["{{.Name}}"] = c.{{.Name}}
+            {{- end}}
+        {{- end}}
+    {{- end}}
+
+    return result
+}
