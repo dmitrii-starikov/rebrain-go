@@ -170,7 +170,7 @@ rebrain-go/
 ### ⏳ Module 08: Code Generation
 - [x] **Block 01:** Reflection
 - [x] **Block 02:** AST (Abstract Syntax Tree)
-- [ ] **Block 03:** Templates
+- [x] **Block 03:** Templates
 - [ ] **Block 04:** Solving Reflection Issues
 - [ ] **Block 05:** Wrapping
 
