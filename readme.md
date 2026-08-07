@@ -168,8 +168,8 @@ rebrain-go/
 - [x] **Block 06:** Profiling with pprof
 
 ### ⏳ Module 08: Code Generation
-- [ ] **Block 01:** Reflection
-- [ ] **Block 02:** AST (Abstract Syntax Tree)
+- [x] **Block 01:** Reflection
+- [x] **Block 02:** AST (Abstract Syntax Tree)
 - [ ] **Block 03:** Templates
 - [ ] **Block 04:** Solving Reflection Issues
 - [ ] **Block 05:** Wrapping
