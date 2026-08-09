@@ -1,0 +1,28 @@
+import (
+	"fmt"
+	"log"
+)
+
+{{ $decorator := (or .Vars.DecoratorName (printf "%sWithRecovery" .Interface.Name)) }}
+
+type {{$decorator}} struct {
+	_base {{.Interface.Type}}
+}
+
+func New{{$decorator}}(base {{.Interface.Type}}) {{$decorator}} {
+	return {{$decorator}}{_base: base}
+}
+
+{{range $method := .Interface.Methods}}
+func (_d {{$decorator}}) {{$method.Declaration}} {
+	defer func() {
+		if r := recover(); r != nil {
+			log.Printf("{{$decorator}}: panic recovered in {{$method.Name}}: %v", r)
+			{{- if $method.ReturnsError }}
+			err = fmt.Errorf("panic recovered: %v", r)
+			{{- end }}
+		}
+	}()
+	{{ $method.Pass "_d._base." }}
+}
+{{end}}
