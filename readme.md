@@ -171,7 +171,7 @@ rebrain-go/
 - [x] **Block 01:** Reflection
 - [x] **Block 02:** AST (Abstract Syntax Tree)
 - [x] **Block 03:** Templates
-- [ ] **Block 04:** Solving Reflection Issues
+- [x] **Block 04:** Solving Reflection Issues
 - [ ] **Block 05:** Wrapping
 
 ### ⏳ Module 09: Final Project
