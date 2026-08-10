@@ -9,5 +9,10 @@ test_02:
 bench_04:
 	@cd ./internal/config && go test -bench . -benchmem -benchtime=3s
 
+generate:
+	@echo "Generating wrappers..."
+	@go generate ./...
+	@echo "Done!"
+
 run:
 	@go run ./cmd/app/

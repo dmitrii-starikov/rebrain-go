@@ -159,7 +159,7 @@ rebrain-go/
   - `08_errgroup/` - [errgroup.go](src/Basics-06/08_errgroup/errgroup.go)
   - Task: [08_task/](src/Basics-06/08_task/) - [links.go](src/Basics-06/08_task/links.go), [readme.md](src/Basics-06/08_task/readme.md)
 
-### ⏳ Module 07: Testing, Benchmarks and Profiling
+### Module 07: Testing, Benchmarks and Profiling
 - [x] **Block 01:** Unit Testing in Go
 - [x] **Block 02:** Mocks, Stubs and Generation with GoMock
 - [x] **Block 03:** Table Driven Tests vs Closure Driven Tests*
@@ -167,12 +167,12 @@ rebrain-go/
 - [x] **Block 05:** Benchmarks
 - [x] **Block 06:** Profiling with pprof
 
-### ⏳ Module 08: Code Generation
+### Module 08: Code Generation
 - [x] **Block 01:** Reflection
 - [x] **Block 02:** AST (Abstract Syntax Tree)
 - [x] **Block 03:** Templates
 - [x] **Block 04:** Solving Reflection Issues
-- [ ] **Block 05:** Wrapping
+- [x] **Block 05:** Wrapping
 
 ### ⏳ Module 09: Final Project
 - [ ] **Block 01:** Final Project
